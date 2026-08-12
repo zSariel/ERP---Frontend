@@ -1,0 +1,266 @@
+.categorias-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categorias-top h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.categorias-top p {
+  margin-top: 6px;
+  color: #6b7280;
+}
+
+.new-category-button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.category-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.category-stat-card {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.category-stat-card span {
+  color: #6b7280;
+}
+
+.category-stat-card strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 28px;
+}
+
+.category-table-card {
+  margin-top: 24px;
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.category-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.category-search-input {
+  width: 320px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+.category-table-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.category-table-card th,
+.category-table-card td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.category-table-card th {
+  color: #374151;
+  font-size: 14px;
+}
+
+.category-table-card td small {
+  display: block;
+  margin-top: 4px;
+  color: #6b7280;
+}
+
+.type-badge,
+.active-badge,
+.inactive-badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.type-badge.receita {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.type-badge.despesa {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.active-badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.inactive-badge {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.color-preview {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+}
+
+.category-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.category-actions button {
+  border: none;
+  background: #f3f4f6;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.category-empty-row {
+  text-align: center;
+  color: #6b7280;
+  padding: 24px !important;
+}
+
+.category-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+.category-modal {
+  background: white;
+  width: 680px;
+  max-width: 100%;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.category-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.category-modal-header h2 {
+  margin: 0;
+}
+
+.category-modal-header button {
+  border: none;
+  background: #f3f4f6;
+  font-size: 24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.category-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.category-modal input,
+.category-modal select,
+.category-modal textarea {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+.category-modal textarea {
+  width: 100%;
+  min-height: 90px;
+  margin-top: 12px;
+  box-sizing: border-box;
+}
+
+.active-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: #374151;
+}
+
+.category-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.cancel-button {
+  background: #e5e7eb;
+  color: #111827;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.save-button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .categorias-top,
+  .category-table-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .category-stats-grid,
+  .category-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-search-input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

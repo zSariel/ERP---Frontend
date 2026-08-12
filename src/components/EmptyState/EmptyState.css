@@ -1,0 +1,7 @@
+.empty-state {
+  background: var(--card);
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  color: var(--muted);
+}

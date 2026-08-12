@@ -1,0 +1,124 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 260px;
+  background: #0f172a;
+  color: white;
+  padding: 22px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.brand span {
+  font-size: 28px;
+}
+
+.brand h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-title {
+  margin: 18px 0 6px;
+  color: #94a3b8;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menu a {
+  color: #cbd5e1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  background: #1e293b;
+  color: white;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 72px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar h3 {
+  margin: 0;
+}
+
+.topbar small {
+  color: #6b7280;
+}
+
+.logout-button {
+  border: none;
+  background: #dc2626;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.logout-button:hover {
+  background: #b91c1c;
+}
+
+.page-content {
+  padding: 28px;
+}
+
+@media (max-width: 800px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: auto;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .topbar {
+    height: auto;
+    padding: 16px;
+    gap: 16px;
+  }
+}
