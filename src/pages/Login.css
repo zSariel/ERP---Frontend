@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background-color: #0f172a;
+
+  overflow: hidden;
+}
+
+/* VÍDEO DE FUNDO */
+
+.login-background-video {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  object-fit: cover;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 0;
+}
+
+/* CAMADA ESCURA SOBRE O VÍDEO */
+
+.login-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.7),
+    rgba(15, 23, 42, 0.4)
+  );
+}
+
+/* CARD */
+
+.login-card {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 420px;
+
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* CABEÇALHO */
+
+.login-header {
+  margin-bottom: 30px;
+}
+
+.login-header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.login-header p {
+  margin: 8px 0 0;
+
+  font-size: 14px;
+
+  color: #6b7280;
+}
+
+/* ERRO */
+
+.login-error {
+  margin-bottom: 20px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  background: #fef2f2;
+
+  color: #b91c1c;
+
+  font-size: 14px;
+}
+
+/* FORMULÁRIO */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.login-field label {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.login-field input {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-field input::placeholder {
+  color: #9ca3af;
+}
+
+.login-field input:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(37, 99, 235, 0.12);
+}
+
+/* SENHA */
+
+.login-password {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.login-password input {
+  padding-right: 48px;
+}
+
+.login-password-button {
+  position: absolute;
+
+  right: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #6b7280;
+
+  font-size: 19px;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.login-password-button:hover {
+  color: #2563eb;
+}
+
+/* BOTÃO */
+
+.login-submit {
+  width: 100%;
+  height: 48px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-submit:hover:not(:disabled) {
+  background: #1d4ed8;
+
+  box-shadow:
+    0 8px 18px
+    rgba(37, 99, 235, 0.22);
+}
+
+.login-submit:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.login-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* LINK DE CADASTRO */
+
+.login-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  font-size: 14px;
+
+  color: #6b7280;
+}
+
+.login-register a {
+  color: #2563eb;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.login-register a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 520px) {
+  .login-page {
+    padding: 18px;
+  }
+
+  .login-card {
+    padding: 30px 24px;
+
+    border-radius: 15px;
+  }
+
+  .login-header h1 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 360px) {
+  .login-card {
+    padding: 26px 18px;
+  }
+
+  .login-register {
+    flex-direction: column;
+
+    gap: 3px;
+  }
+}
